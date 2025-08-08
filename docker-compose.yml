@@ -1,0 +1,9 @@
+services:
+  console:
+    build:
+      dockerfile: Dockerfile
+    image: personal-finance-tool:latest
+    tty: true
+    command: /bin/bash
+    volumes:
+      - './:/usr/src/app'

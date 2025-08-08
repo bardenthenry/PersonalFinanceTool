@@ -1,0 +1,10 @@
+fastapi
+fastapi-cli
+httpx
+pymongo
+motor
+pytz
+tqdm
+pydantic
+pandas
+numpy
