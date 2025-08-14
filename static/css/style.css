@@ -1,0 +1,42 @@
+:root {
+    color-scheme: dark light;
+}
+
+/* 當系統偏好深色時套用 */
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background: #333;
+        color: #eee;
+    }
+
+    .sidebar-item {
+        background: #333;
+        color: #eee;
+    }
+    
+    .navbar .navbar-expand-lg .bg-body-tertiary {
+        background: #333;
+        color: #eee;
+    }
+
+    .list-group .list-group-item {
+        background-color: #333;
+        color: #ddd;
+        border: 0px;
+        border-radius: 0px;
+    }
+} */
+
+#tool-list {
+    border-right: 1px solid #ededed76;
+}
+
+.list-group .list-group-item {
+    border: 0px;
+    border-bottom: 1px solid #ededed76;
+    border-radius: 0px;
+}
+
+.add-button {
+    border-radius: 30px;
+}

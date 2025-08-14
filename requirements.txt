@@ -8,3 +8,4 @@ tqdm
 pydantic
 pandas
 numpy
+Jinja2
