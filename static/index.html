@@ -9,63 +9,77 @@
     <script src="js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid" id="header-bar">
-        <a class="navbar-brand" href="#">PFT</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Dropdown
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            
-          </ul> -->
-          <!-- <div style="float: right;">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div> -->
-          <div class="d-flex align-items-center ms-auto">
-            <img src="img/default_avatar.png" 
-                 alt="User Avatar" 
-                 class="rounded-circle me-2" 
-                 width="40" height="40">
-            <span class="fw-bold">
-              <div class="btn-group">
-                <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  林冠亨
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">設定</a></li>
-                  <li><a class="dropdown-item" href="#">登出</a></li>
-                </ul>
-              </div>
-            </span>
-          </div>
-          
+    <main class="d-flex flex-nowrap main-container">
+      <div id="sidebar" class="sidebar d-flex flex-column flex-shrink-0 p-3" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Sidebar</span>
+        </a>
+        <hr>
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"></use></svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"></use></svg>
+              Orders
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+              Products
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link text-white">
+              <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
+              Customers
+            </a>
+          </li>
+        </ul>
+        <hr>
+        <div class="dropdown">
+          <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>mdo</strong>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+            <li><a class="dropdown-item" href="#">New project...</a></li>
+            <li><a class="dropdown-item" href="#">Settings</a></li>
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Sign out</a></li>
+          </ul>
         </div>
       </div>
-    </nav>
 
-    <div class="container-fluid">
-      <div class="row">
+      <div class="flex-grow-1 p-3">
+        <button class="btn btn-primary mb-3" id="sidebar-toggle">收起
+          <!-- <i class="bi bi-list"></i> -->
+        </button>
+        <h1>主要內容區</h1>
+        <p>這個區塊會自動填滿 sidebar 右側所有可用的空間。</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi.</p>
+      </div>
+
+      
+    </main>
+
+
+
+    <!-- <div class="container-fluid flex-fill">
+      <div class="row w-100">
         <div class="sidebar col-2" id="tool-list">
           <ul class="list-group">
             <li class="list-group-item">
@@ -95,11 +109,12 @@
             </li>
           </ul>
         </div>
-        <div class="col-9">
+        <div class="col-10">
           <main id="main-content"></main>
         </div>
       </div>
-    </div>
+    </div> -->
+    <script src="js/index.js"></script>
     <script src="js/expense_record.js"></script>
   </body>
 </html>
